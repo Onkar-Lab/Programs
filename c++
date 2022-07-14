@@ -7,21 +7,25 @@ Else if n>9 and it is an odd number, then print "odd".
 using namespace std;
 
 int main() {
-    int a,b;             
-   cin>>a>>b;
-   int n=10;
-    for(int i=1;i<b;){
-     if(i==a||i!=b){
-         cout<<"eight"<<endl;
-         cout<<"nine"<<endl;
-         cout<<"even"<<endl;
-         cout<<"odd"<<endl;
+    // Complete the code.
+    int a, b;
+    string s[10] = {"zero", "one", "two", "three", "four",\
+        "five", "six", "seven", "eight", "nine"};
+    cin >> a >> b;
+    for(int i = a; i <= b; i++) {
         
-     }   
-       break;      
-    }    
+        if(i > 9) {
+            if(i % 2 == 0)
+                cout << "even\n";
+            else cout << "odd\n";
+        }
+        else {
+            cout << s[i]<<endl;
+        }
+    }
     return 0;
 }
+
 Input:
 8
 11
